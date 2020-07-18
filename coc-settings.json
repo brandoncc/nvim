@@ -1,0 +1,40 @@
+{
+  "languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      // custom config path
+      // "args": ["-c", "/path/to/your/config.yaml"],
+      "filetypes": ["vim", "eruby", "markdown", "yaml"]
+    },
+    "flow": {
+      "command": "flow",
+      "args": ["lsp"],
+      "filetypes": ["javascript", "javascriptreact"],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "settings": {},
+      "rootPatterns": [".flowconfig"]
+    }
+  },
+  "javascript.validate.enable": false,
+  "tsserver.log": "verbose",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "cSpell.userWords": [
+    "bpry",
+    "gundo",
+    "jremmen",
+    "junegunn",
+    "neoclide",
+    "semistandard",
+    "tpope",
+    "trusktr"
+  ],
+  "codeLens.enable": true,
+  "git.addGBlameToVirtualText": true
+}
