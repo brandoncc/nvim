@@ -4,9 +4,6 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/key-mappings.vim
 " source $HOME/.config/nvim/keys/which-key.vim
 
-abbrev bpry "require 'pry'; binding.pry"
-
-
 " source $HOME/.config/nvim/plug-config/*.vim
 "
 " for i in split(globpath('./plug-config/', '*.vim'), '\n')
@@ -24,7 +21,6 @@ else
   source $HOME/.config/nvim/plug-config/coc.vim
   source $HOME/.config/nvim/plug-config/fugitive.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
-  source $HOME/.config/nvim/plug-config/the-primeagen.vim
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/hardtime.vim
   source $HOME/.config/nvim/plug-config/rg.vim
