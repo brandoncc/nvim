@@ -54,12 +54,16 @@ type TProps = {
 	children: Node
 };
 
+type TState = {};
+type TDispatch = {};
+
 const defaultStateValue = {};
 const defaultDispatchValue = {};
 
-export const ${1:`!p snip.rv = file_name_to_pascal_case(snip.basename)`}StateContext = createContext<{}>(defaultStateValue);
-
-export const $1DispatchContext = createContext<{}>(defaultDispatchValue);
+export const ${1:`!p snip.rv = file_name_to_pascal_case(snip.basename)`}StateContext = createContext<TState>(defaultStateValue);
+export const $1DispatchContext = createContext<TDispatch>(
+  defaultDispatchValue
+);
 
 export const $1Provider = ({ children }: TProps) => {
 	return (
