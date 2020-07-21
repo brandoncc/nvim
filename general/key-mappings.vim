@@ -13,3 +13,6 @@ nnoremap <leader>l :wincmd l<CR>
 " window size management
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+" quick splits
+nnoremap \| :vsplit<CR>
+nnoremap _ :split<CR>
