@@ -36,5 +36,6 @@
     "trusktr"
   ],
   "codeLens.enable": true,
-  "git.addGBlameToVirtualText": true
+  "git.addGBlameToVirtualText": true,
+  "solargraph.diagnostics": true
 }

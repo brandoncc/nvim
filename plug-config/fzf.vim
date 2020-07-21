@@ -2,6 +2,7 @@ nnoremap <C-p> :Files<CR>
 nnoremap <Leader>fb :FzfPreviewAllBuffers<CR>
 nnoremap <Leader>fh :FzfPreviewProjectMruFiles<CR>
 nnoremap <Leader>. :FzfPreviewProjectFiles<CR>
+nnoremap <Leader>fq :FzfPreviewQuickFix<CR>
 
 nnoremap <Leader>fj :FzfPreviewJumps<CR>
 nnoremap <Leader>gs :FzfPreviewGitStatus<CR>

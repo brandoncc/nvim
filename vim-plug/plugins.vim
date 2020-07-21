@@ -37,6 +37,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'andymass/vim-matchup'
+Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'
+Plug 'danro/rename.vim'
 " Initialize plugin system
 call plug#end()
 

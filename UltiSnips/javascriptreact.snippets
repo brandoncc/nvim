@@ -1,0 +1,62 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+global !p
+"""
+This function will turn a snake case or camelCase string into a PascalCase
+string.
+"""
+def file_name_to_pascal_case(file_name = "ContextName"):
+  return ''.join(x.title() for x in re.sub('(\.[^.]*)$', '', file_name).split('_'))
+endglobal
+
+snippet contextprovider "Context file content for hooks" b
+// @flow
+import React, { createContext } from 'react';
+
+import type { Node } from 'react';
+
+type TProps = {
+	children: Node
+};
+
+const defaultStateValue = {};
+const defaultDispatchValue = {};
+
+export const ${1:`!p snip.rv = file_name_to_pascal_case(snip.basename)`}StateContext = createContext<{}>(defaultStateValue);
+
+export const $1DispatchContext = createContext<{}>(defaultDispatchValue);
+
+export const $1Provider = ({ children }: TProps) => {
+	return (
+		<$1DispatchContext.Provider value={{}}>
+			<$1StateContext.Provider value={{}}>
+				{children}
+			</$1StateContext.Provider>
+		</$1DispatchContext.Provider>
+	);
+};
+endsnippet
