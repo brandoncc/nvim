@@ -30,7 +30,18 @@ This function will turn a snake case or camelCase string into a PascalCase
 string.
 """
 def file_name_to_pascal_case(file_name = "ContextName"):
-  return ''.join(x.title() for x in re.sub('(\.[^.]*)$', '', file_name).split('_'))
+  # remove and file extensions
+  basename = re.sub('\..*$', '', file_name)
+  
+  # insert a space before any capital letter or underscore
+  space_padded = re.sub('([A-Z_]+)', r' \1', basename)
+
+  # remove all underscores, they are not needed as markers anymore
+  without_underscores = re.sub('_', '', space_padded)
+
+  word_parts = without_underscores.split()
+
+  return ''.join(x.title() for x in word_parts)
 endglobal
 
 snippet contextprovider "Context file content for hooks" b
