@@ -24,6 +24,7 @@ else
   source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/hardtime.vim
   source $HOME/.config/nvim/plug-config/rg.vim
+  source $HOME/.config/nvim/plug-config/startify.vim
   source $HOME/.config/nvim/plug-config/test.vim
   source $HOME/.config/nvim/plug-config/todo-lists.vim
   source $HOME/.config/nvim/plug-config/ultisnips.vim

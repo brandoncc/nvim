@@ -39,6 +39,7 @@ Plug 'andymass/vim-matchup'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'danro/rename.vim'
+Plug 'mhinz/vim-startify'
 " Initialize plugin system
 call plug#end()
 
