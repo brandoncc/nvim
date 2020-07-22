@@ -21,8 +21,8 @@ set signcolumn=yes
 
 let g:coc_filetype_map = {
   \ '': 'html',
-  \ 'javascript.javascriptreact.javascript-react.javascript_react': 'javascriptreact',
-  \ 'typescript.javascriptreact.typescriptreact.javascript-react.javascript_react': 'typescriptreact'
+  \ 'javascriptreact.javascript.javascript-react.javascript_react': 'javascriptreact',
+  \ 'typescriptreact.javascript.typescript.javascriptreact.javascript-react.javascript_react': 'typescriptreact'
   \ }
 
 " GoTo code navigation.
