@@ -19,6 +19,12 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
+let g:coc_filetype_map = {
+  \ '': 'html',
+  \ 'javascript.javascriptreact.javascript-react.javascript_react': 'javascriptreact',
+  \ 'typescript.javascriptreact.typescriptreact.javascript-react.javascript_react': 'typescriptreact'
+  \ }
+
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
