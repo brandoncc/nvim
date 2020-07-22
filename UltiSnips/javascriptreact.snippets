@@ -75,3 +75,19 @@ export const $1Provider = ({ children }: TProps) => {
 	);
 };
 endsnippet
+
+snippet us "useState hook" b
+const [${1:value}, `!p snip.rv = re.sub('^(.)', lambda m: "set" + m[1].upper(), t[1])`] = useState(${2:initialState});
+endsnippet
+
+snippet uc "useContext hook" b
+const { $1} = useContext(${2:ContextName});
+endsnippet
+
+snippet ue "useEffect hook" b
+useEffect(() => {
+  $2
+
+  return () => {};
+}, [$1]);
+endsnippet
