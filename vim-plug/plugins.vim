@@ -40,6 +40,7 @@ Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'danro/rename.vim'
 Plug 'mhinz/vim-startify'
+Plug 'metakirby5/codi.vim'
 " Initialize plugin system
 call plug#end()
 
