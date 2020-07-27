@@ -57,7 +57,7 @@ function! s:RefactorSelectionToSnippet()
 
   let closing_lines = ["endsnippet"]
 
-  silent exe "UltiSnipsEdit " . &filetype
+  silent exe "UltiSnipsEdit " . split(&filetype, '\.')[0]
 
   let line_count = line('$')
   let last_line_is_blank = strlen(getline(line_count)) == 0
