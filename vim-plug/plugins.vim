@@ -1,3 +1,13 @@
+function! s:TodoistApiKeyPath()
+  return fnamemodify(expand($MYVIMRC, ''), ":h") . "/api_keys/todoist"
+endfunction
+
+function! s:TodoistApiKey()
+  return readfile(s:TodoistApiKeyPath())[0]
+endfunction
+
+let todoist = { 'key': s:TodoistApiKey() }
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -17,6 +27,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'antoinemadec/coc-fzf'
 Plug 'trusktr/seti.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'sjl/gundo.vim'
@@ -26,7 +37,7 @@ Plug 'christoomey/vim-system-copy'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'radenling/vim-dispatch-neovim'
-Plug 'aserebryakov/vim-todo-lists'
+Plug 'romgrk/todoist.nvim', { 'do': ':TodoistInstall' }
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
@@ -41,6 +52,14 @@ Plug 'honza/vim-snippets'
 Plug 'danro/rename.vim'
 Plug 'mhinz/vim-startify'
 Plug 'metakirby5/codi.vim'
+Plug 'vimlab/split-term.vim'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'sorin-ionescu/vim-ruby-block-conv'
+
+Plug 'wellle/targets.vim'
+
+" Always load dev icons last!!
+Plug 'ryanoasis/vim-devicons'
+
 " Initialize plugin system
 call plug#end()
-

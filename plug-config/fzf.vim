@@ -16,3 +16,4 @@ nnoremap <leader><leader>f :call fzf#vim#grep("rg --column --line-number --no-he
 nnoremap <leader><leader>F :call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(expand("<cWORD>")), 1, 0)<CR>
 
 let g:fzf_buffers_jump = 1
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }

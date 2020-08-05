@@ -26,6 +26,9 @@
     "typescriptreact"
   ],
   "cSpell.userWords": [
+    "Airtable",
+    "CSRF",
+    "Rollbar",
     "bpry",
     "gundo",
     "jremmen",
@@ -33,9 +36,19 @@
     "neoclide",
     "semistandard",
     "tpope",
-    "trusktr"
+    "trusktr",
+    "xargs"
   ],
   "codeLens.enable": true,
   "git.addGBlameToVirtualText": true,
-  "solargraph.diagnostics": true
+  "solargraph.diagnostics": true,
+  // don't change working directory when changing tree directory
+  "explorer.file.tabCD": false,
+  "explorer.quitOnOpen": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.openAction.strategy": "split",
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.datetime.format": "MM/dd/yy HH:mm:ss",
+  "explorer.file.column.git.showIgnored": true
 }

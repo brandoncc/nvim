@@ -95,3 +95,11 @@ endsnippet
 snippet ur "useRef hook" b
 const ${1:refName}Ref = useRef(null);
 endsnippet
+
+snippet up "usePrevious hook" b
+const prev${1:Content} = usePrevious<$2>($3);
+endsnippet
+
+snippet unrr "Description" b
+const ${1:content}NoRenderRef = useNoRenderReference(${2:initialValue});
+endsnippet

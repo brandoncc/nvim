@@ -41,13 +41,19 @@ nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 
 nmap <leader>cr :CocRestart<CR>
 nmap <leader>cm :CocList marketplace<CR>
-nmap <leader>cs :CocSearch
+nmap <leader>cs :CocSearch 
 nmap <leader>cp :CocList project<CR>
 vmap <leader>cf <Plug>(coc-format-selected)
 nmap <leader>cf <Plug>(coc-format-selected)
-nmap <leader>ca :CocAction<CR>
-vmap <leader>ca :CocAction<CR>
+nmap <leader>ca :CocFzfList actions<CR>
+vmap <leader>ca :CocFzfList actions<CR>
 nmap <leader>ce :CocCommand explorer<CR>
+
+nmap <leader>cl :CocFzfList<CR>
+vmap <leader>cl :CocFzfList<CR>
+
+nmap <leader>cd :CocFzfList diagnostics<CR>
+vmap <leader>cd :CocFzfList diagnostics<CR>
 
 nmap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
