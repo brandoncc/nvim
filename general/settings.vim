@@ -26,6 +26,9 @@ set matchpairs+=<:>
 set relativenumber
 set inccommand=split
 
+set splitbelow
+set splitright
+
 let mapleader = " "
 
 colorscheme seti
