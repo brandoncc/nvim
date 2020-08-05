@@ -26,9 +26,6 @@ set matchpairs+=<:>
 set relativenumber
 set inccommand=split
 
-set splitbelow
-set splitright
-
 " For undotree
 if has("persistent_undo")
   set undodir=~/.vim/undodir"
