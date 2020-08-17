@@ -17,4 +17,4 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap \| :vsplit<CR>
 nnoremap _ :split<CR>
 
-tnoremap <Esc><Esc> <C-\><C-n>
+tnoremap <buffer> <Esc><Esc> <C-\><C-n>

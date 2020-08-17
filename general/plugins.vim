@@ -42,6 +42,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'andymass/vim-matchup'
 Plug 'honza/vim-snippets'
 Plug 'sorin-ionescu/vim-ruby-block-conv'
+Plug 'vimwiki/vimwiki'
+
+" Temporary
+Plug "ThePrimeagen/vim-apm" 
 
 " Always load dev icons last!!
 Plug 'ryanoasis/vim-devicons'
