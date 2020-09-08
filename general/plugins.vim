@@ -13,6 +13,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'junegunn/fzf.vim'
     Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 
+Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/telescope.nvim'
+
 " Sort command:
 " :'<,'>sort /\/[A-z]/ ri
 Plug 'skywind3000/asyncrun.vim'
