@@ -56,6 +56,7 @@ nmap <leader>cd :CocFzfList diagnostics<CR>
 vmap <leader>cd :CocFzfList diagnostics<CR>
 
 nmap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+vmap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

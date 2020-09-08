@@ -15,10 +15,19 @@
       "requireRootPattern": true,
       "settings": {},
       "rootPatterns": [".flowconfig"]
+    },
+    "lua": {
+	    "cwd": "/Users/brandoncc/dev/lua-language-server",
+	    "command": "./bin/macOS/lua-language-server",
+	    "args": ["-E", "./main.lua"],
+	    "filetypes": ["lua"],
+	    "rootPatterns": [".git/"],
+      "trace.server": "verbose"
     }
   },
   "javascript.validate.enable": false,
   "tsserver.log": "verbose",
+  "tsserver.npm": "/Users/brandoncc/.nvm/versions/node/v10.22.0/bin/npm",
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
@@ -56,5 +65,8 @@
   "explorer.icon.enableVimDevicons": true,
   "explorer.previewAction.onHover": false,
   "explorer.datetime.format": "MM/dd/yy HH:mm:ss",
-  "explorer.file.column.git.showIgnored": true
+  "explorer.file.column.git.showIgnored": true,
+  "lua.diagnostics.disable" : [
+    "lowercase-global"
+  ]
 }

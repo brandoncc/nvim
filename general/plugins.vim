@@ -17,6 +17,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " :'<,'>sort /\/[A-z]/ ri
 Plug 'skywind3000/asyncrun.vim'
 Plug 'metakirby5/codi.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
 Plug 'danro/rename.vim'
 Plug 'trusktr/seti.vim'
 Plug 'vimlab/split-term.vim'
@@ -43,9 +45,6 @@ Plug 'andymass/vim-matchup'
 Plug 'honza/vim-snippets'
 Plug 'sorin-ionescu/vim-ruby-block-conv'
 Plug 'vimwiki/vimwiki'
-
-" Temporary
-Plug "ThePrimeagen/vim-apm" 
 
 " Always load dev icons last!!
 Plug 'ryanoasis/vim-devicons'
