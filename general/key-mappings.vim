@@ -20,11 +20,3 @@ nnoremap _ :split<CR>
 tnoremap <buffer> <Esc><Esc> <C-\><C-n>
 
 inoremap jk <Esc>
-
-nnoremap <leader>md :call <SID>mkdir_p()<CR>
-
-function! s:mkdir_p()
-  let path = fnamemodify(expand('%'), ":h:p")
-  call system('mkdir -p ' . path)
-  echo path . ' was created'
-endfunction
