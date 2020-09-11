@@ -20,3 +20,5 @@ nnoremap _ :split<CR>
 tnoremap <buffer> <Esc><Esc> <C-\><C-n>
 
 inoremap jk <Esc>
+
+nnoremap <Leader><Leader>s :lua require('brandoncc.file_operations').source_file()<CR>
