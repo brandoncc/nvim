@@ -12,6 +12,8 @@ function M.commands()
   require('telescope.builtin').builtin()
 end
 
+-- The current buffer builtin is a good example of writing a custom builtin:
+-- https://github.com/nvim-lua/telescope.nvim/blob/master/lua/telescope/builtin.lua#L477-L513
 function M.example()
   local finders = require('telescope.finders')
   local pickers = require('telescope.pickers')
