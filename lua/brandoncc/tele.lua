@@ -2,47 +2,47 @@ package.loaded['brandoncc.tele'] = nil
 
 local vim = vim
 
-M = {}
+local tele = {}
 
-function M.all_files()
+function tele.all_files()
   require'telescope.builtin'.find_files{}
 end
 
-function M.cfwd_files()
+function tele.cfwd_files()
   require'telescope.builtin'.find_files{
     cwd = vim.fn.expand("%:p:h")
   }
 end
 
-function M.commands()
+function tele.commands()
   require'telescope.builtin'.builtin{}
 end
 
-function M.command_history()
+function tele.command_history()
   require'telescope.builtin'.command_history{}
 end
 
-function M.git_files()
+function tele.git_files()
   require'telescope.builtin'.git_files{}
 end
 
-function M.project_grep()
+function tele.project_grep()
   require'telescope.builtin'.live_grep{}
 end
 
-function M.setup()
+function tele.setup()
   require('telescope').setup{
     -- configuration
   }
 end
 
-function M.symbols()
+function tele.symbols()
   require'telescope.builtin'.treesitter{}
 end
 
 -- The current buffer builtin is a good example of writing a custom builtin:
 -- https://github.com/nvim-lua/telescope.nvim/blob/master/lua/telescope/builtin.lua#L477-L513
-function M.example()
+function tele.example()
   local finders = require('telescope.finders')
   local pickers = require('telescope.pickers')
   local sorters = require('telescope.sorters')
@@ -59,6 +59,6 @@ function M.example()
 end
 
 
-M.setup()
+tele.setup()
 
-return M
+return tele
