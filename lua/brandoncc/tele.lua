@@ -1,6 +1,34 @@
 package.loaded['brandoncc.tele'] = nil
 
+local vim = vim
+
 M = {}
+
+function M.all_files()
+  require'telescope.builtin'.find_files{}
+end
+
+function M.cfwd_files()
+  require'telescope.builtin'.find_files{
+    cwd = vim.fn.expand("%:p:h")
+  }
+end
+
+function M.commands()
+  require'telescope.builtin'.builtin{}
+end
+
+function M.command_history()
+  require'telescope.builtin'.command_history{}
+end
+
+function M.git_files()
+  require'telescope.builtin'.git_files{}
+end
+
+function M.project_grep()
+  require'telescope.builtin'.live_grep{}
+end
 
 function M.setup()
   require('telescope').setup{
@@ -8,8 +36,8 @@ function M.setup()
   }
 end
 
-function M.commands()
-  require('telescope.builtin').builtin()
+function M.symbols()
+  require'telescope.builtin'.treesitter{}
 end
 
 -- The current buffer builtin is a good example of writing a custom builtin:
