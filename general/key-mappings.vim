@@ -21,4 +21,6 @@ tnoremap <buffer> <Esc><Esc> <C-\><C-n>
 
 inoremap jk <Esc>
 
-nnoremap <Leader><Leader>s :lua require('brandoncc.file_operations').source_file()<CR>
+nnoremap <Leader><Leader>s :lua require'brandoncc.file_operations'.source_file()<CR>
+
+nnoremap <Leader>rc :lua require'brandoncc.file_operations'.source_init_vim()<CR>

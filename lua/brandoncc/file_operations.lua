@@ -1,9 +1,9 @@
 package.loaded['brandoncc.file_operations'] = nil
-M = {}
+local module = {}
 
 local vim = vim
 
-function M.source_file()
+function module.source_file()
   local extension = vim.fn.expand('%:e')
 
   if (extension == 'vim') then
@@ -15,4 +15,9 @@ function M.source_file()
   end
 end
 
-return M
+function module.source_init_vim()
+  vim.cmd('source $HOME/.config/nvim/init.vim')
+  print('Sourced init.vim')
+end
+
+return module 
