@@ -47,3 +47,5 @@ let g:python_host_prog='/usr/bin/python2'
 " seems to use fish though, which setting $SHELL fixes.
 set shell=/bin/zsh
 let $SHELL = "/bin/zsh"
+
+let g:diagnostic_enable_virtual_text = 1

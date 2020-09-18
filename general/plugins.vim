@@ -17,12 +17,22 @@ Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-lua/telescope.nvim'
 
+Plug 'nvim-lua/completion-nvim'
+  Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/completion-treesitter'
+
 " Sort command:
 " :'<,'>sort /\/[A-z]/ ri
 Plug 'skywind3000/asyncrun.vim'
 Plug 'metakirby5/codi.vim'
+Plug 'steelsojka/completion-buffers'
+Plug 'nvim-lua/diagnostic-nvim'
+Plug 'brandoncc/vim-easylog'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
+Plug 'keith/investigate.vim'
+Plug 'kdheepak/lazygit.nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'danro/rename.vim'
 Plug 'trusktr/seti.vim'

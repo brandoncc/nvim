@@ -15,14 +15,6 @@
       "requireRootPattern": true,
       "settings": {},
       "rootPatterns": [".flowconfig"]
-    },
-    "lua": {
-	    "cwd": "/Users/brandoncc/dev/lua-language-server",
-	    "command": "./bin/macOS/lua-language-server",
-	    "args": ["-E", "./main.lua"],
-	    "filetypes": ["lua"],
-	    "rootPatterns": [".git/"],
-      "trace.server": "verbose"
     }
   },
   "javascript.validate.enable": false,

@@ -1,8 +1,9 @@
 " Delete the word after the cursor while in insert mode
 inoremap <M-w> <C-\><C-o>dB
 
-" Delete the word before the cursor while in insert mode
+" Delete the word before the cursor while in insert or command mode
 inoremap <M-BS> <C-\><C-o>db
+cnoremap <M-BS> <C-w>
 
 " window navigation
 nnoremap <leader>h :wincmd h<CR>
@@ -18,6 +19,7 @@ nnoremap \| :vsplit<CR>
 nnoremap _ :split<CR>
 
 tnoremap <buffer> <Esc><Esc> <C-\><C-n>
+tnoremap <buffer> jk <C-\><C-n>
 
 inoremap jk <Esc>
 
