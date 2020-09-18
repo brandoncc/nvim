@@ -6,6 +6,9 @@ nmap <silent> <buffer> <leader>ts :TestSuite<CR>
 nmap <silent> <buffer> <leader>tl :TestLast<CR>
 nmap <silent> <buffer> <leader>tg :TestVisit<CR>
 
+" nmap ]g :NextDiagnostic<CR>
+" nmap [g :PrevDiagnostic<CR>
+
 " ===== Seeing Is Believing =====
 " Assumes you have a Ruby with SiB available in the PATH
 " If it doesn't work, you may need to `gem install seeing_is_believing`

@@ -5,6 +5,16 @@ local on_attach_vim = function(client)
   require'diagnostic'.on_attach(client)
 end
 
+-- nvim_lsp.solargraph.setup{
+--   on_attach = on_attach_vim,
+--   settings = {
+--     solargraph = {
+--       diagnostics = true,
+--       formatting = true,
+--     }
+--   }
+-- }
+
 nvim_lsp.sumneko_lua.setup{
   cmd = {
     "/Users/brandoncc/.cache/nvim/nvim_lsp/sumneko_lua/lua-language-server/bin/macOS/lua-language-server",
