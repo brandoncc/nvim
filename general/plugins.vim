@@ -4,21 +4,21 @@
 call plug#begin('~/.config/nvim/plugged')
 
 
-" Indented groups are order dependent
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" " Indented groups are order dependent
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  Plug 'antoinemadec/coc-fzf'
+"   Plug 'antoinemadec/coc-fzf'
 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+    Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
 
 Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-lua/telescope.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nvim-lua/completion-nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/completion-treesitter'
 
 " Sort command:
@@ -27,15 +27,20 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'steelsojka/completion-buffers'
 Plug 'nvim-lua/diagnostic-nvim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'brandoncc/vim-easylog'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
+Plug 'dag/vim-fish'
+Plug 'alepez/vim-gtest'
 Plug 'keith/investigate.vim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'danro/rename.vim'
+Plug 'tpope/vim-repeat'
 Plug 'trusktr/seti.vim'
+Plug 'norcalli/snippets.nvim'
 Plug 'vimlab/split-term.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'wellle/targets.vim'
