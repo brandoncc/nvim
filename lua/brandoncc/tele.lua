@@ -30,6 +30,10 @@ function tele.project_grep()
   require'telescope.builtin'.live_grep{}
 end
 
+function tele.file_browser()
+  require'telescope.builtin'.file_browser{}
+end
+
 function tele.setup()
   require('telescope').setup{
     -- configuration
