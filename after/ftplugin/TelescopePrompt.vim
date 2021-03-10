@@ -1,1 +1,1 @@
-inoremap <buffer> <Esc> <C-O>:execute("bdelete")<CR><Esc>
+" inoremap <buffer> <Esc> <C-O>:execute("bdelete")<CR><Esc>
