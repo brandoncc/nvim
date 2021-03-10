@@ -82,14 +82,7 @@ nvim_lsp.efm.setup {
   }
 }
 
--- require'lspconfig'.flow.setup{}
-
--- -- require'nvim_lsp'.vimls.setup{
--- --   on_attach = on_attach_vim
--- -- }
-
-
--- Use a loop to conveniently both setup defined servers 
+-- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
 local servers = { "pyright", "rust_analyzer", "tsserver", "flow" }
 for _, lsp in ipairs(servers) do
