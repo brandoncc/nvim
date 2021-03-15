@@ -1,5 +1,6 @@
 local vim = vim
 local nvim_lsp = require'lspconfig'
+local configs = require'lspconfig/configs'
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -69,9 +70,14 @@ nvim_lsp.sumneko_lua.setup{
   on_attach = on_attach,
 }
 
-
 nvim_lsp.efm.setup {
-  init_options = {documentFormatting = true},
+  on_attach = on_attach,
+  init_options = {
+    documentFormatting = true,
+    documentSymbol = true,
+    codeAction = true,
+    completion = true
+  },
   settings = {
     rootMarkers = {".git/"},
     languages = {
@@ -81,6 +87,111 @@ nvim_lsp.efm.setup {
     }
   }
 }
+
+-- -- Check if it's already defined for when reloading this file.
+-- if not nvim_lsp.stylelint then
+--   configs.stylelint = {
+--     default_config = {
+--       cmd = {
+--         'node',
+--         '/Users/brandoncc/dev/time-capsule/node_modules/stylelint-lsp/dist/index.js', 
+--         '--stdio'
+--       };
+--       filetypes = {'css', 'sass', 'scss'};
+--       root_dir = function(fname)
+--         return nvim_lsp.util.find_git_ancestor(fname) or vim.loop.os_homedir()
+--       end;
+--     };
+--   }
+-- end
+-- nvim_lsp.stylelint.setup{
+--   on_attach = on_attach
+-- }
+--
+--
+
+-- local filetypes = {
+--   javacript = "eslint",
+--   javascriptreact = "eslint",
+--   typescript = "eslint",
+--   typescriptreact = "eslint",
+--   css = "stylelint",
+--   scss = "stylelint",
+--   sass = "stylelint",
+--   less = "stylelint"
+-- }
+
+-- local linters = {
+--   eslint = {
+--     sourceName = "eslint",
+--     command = "eslint_d",
+--     rootPatterns = {".eslintrc.js", "package.json"},
+--     debounce = 100,
+--     args = {"--stdin", "--stdin-filename", "%filepath", "--format", "json"},
+--     parseJson = {
+--       errorsRoot = "[0].messages",
+--       line = "line",
+--       column = "column",
+--       endLine = "endLine",
+--       endColumn = "endColumn",
+--       message = "${message} [${ruleId}]",
+--       security = "severity"
+--     },
+--     securities = {[2] = "error", [1] = "warning"}
+--   },
+--   stylelint = {
+--     sourceName = "stylelint",
+--     command = "stylelint",
+--     rootPatterns = {
+--       ".stylelintrc",
+--       ".stylelintrc.json",
+--       ".stylelintrc.js", "package.json"
+--     },
+--     debounce = 100,
+--     args = {"--stdin", "--stdin-filename", "%filepath", "--formatter", "json"},
+--     parseJson = {
+--       errorsRoot = "[0].warnings",
+--       line = "line",
+--       column = "column",
+--       message = "${text}",
+--       security = "severity"
+--     },
+--     securities = {[2] = "error", [1] = "warning"}
+--   }
+-- }
+
+-- local formatters = {
+--   eslint = {
+--     command = "eslint_d",
+--     args = {"--stdin", "--stdin-filename", "%filepath", "--fix-dry-run"},
+--   },
+--   stylelint = {
+--     command = "stylelint",
+--     args = {"--stdin-filepath", "%filepath", "--fix"}
+--   }
+-- }
+
+-- local formatFiletypes = {
+--   javascript = "eslint",
+--   javascriptreact = "eslint",
+--   typescript = "eslint",
+--   typescriptreact = "eslint",
+--   css = "stylelint",
+--   scss = "stylelint",
+--   sass = "stylelint",
+--   less = "stylelint"
+-- }
+
+-- require'lspconfig'.diagnosticls.setup {
+--   on_attach = on_attach,
+--   filetypes = vim.tbl_keys(filetypes),
+--   init_options = {
+--     filetypes = filetypes,
+--     linters = linters,
+--     -- formatters = formatters,
+--     -- formatFiletypes = formatFiletypes
+--   }
+-- }
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
