@@ -31,7 +31,9 @@ function tele.project_grep()
 end
 
 function tele.file_browser()
-  require'telescope.builtin'.file_browser{}
+  require'telescope.builtin'.file_browser{
+    cwd = vim.fn.expand("%:p:h")
+  }
 end
 
 function tele.setup()
